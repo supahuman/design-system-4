@@ -9,5 +9,9 @@
       "source": "/(.*)",
       "destination": "/index.html"
     }
-  ]
+  ],
+  "functions": {},
+  "env": {
+    "NPM_CONFIG_FUND": "false"
+  }
 }
