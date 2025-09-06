@@ -9,7 +9,7 @@
     "apps/*"
   ],
   "scripts": {
-    "build": "pnpm -r build",
+    "build": "npm run build --workspaces",
     "dev": "pnpm -r dev",
     "test": "pnpm -r test",
     "lint": "eslint packages/**/*.ts apps/**/*.ts --fix",
