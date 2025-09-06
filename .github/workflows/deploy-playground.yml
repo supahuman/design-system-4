@@ -5,7 +5,7 @@ on:
     branches: [main, master]
     paths: ['apps/playground/**', 'packages/**']
   workflow_run:
-    workflows: ["Design System CI/CD"]
+    workflows: ['Design System CI/CD']
     types:
       - completed
     branches: [main, master]
