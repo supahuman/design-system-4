@@ -13,20 +13,26 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          # Checkout the entire repository, not just the playground
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
 
-      - name: Install dependencies
+      - name: Install dependencies (root)
         run: npm install
+        working-directory: ../../
 
       - name: Build design tokens
-        run: cd packages/tokens && npm run build
+        run: npm run build
+        working-directory: ../../packages/tokens
 
       - name: Build playground
-        run: npm run build --workspace=playground
+        run: npm run build
+        working-directory: ./
 
       - name: Deploy to Vercel
         uses: amondnet/vercel-action@v25
@@ -34,5 +40,5 @@ jobs:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          working-directory: ./apps/playground
+          working-directory: ./
           vercel-args: '--prod'
