@@ -11,35 +11,35 @@ jobs:
   quality:
     name: Code Quality & Tests
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
           cache: 'npm'
-          
+
       - name: Install dependencies
         run: npm ci
-        
+
       - name: TypeScript type checking
         run: npm run type-check
-        
+
       - name: Lint code
         run: npm run lint
-        
+
       - name: Format check
         run: npm run format:check
-        
+
       - name: Generate design tokens
         run: cd packages/tokens && npm run build
-        
+
       - name: Build packages
         run: npm run build
-        
+
       - name: Run tests
         run: npm test
         if: false # Skip for now until we add tests  # Visual regression testing with Chromatic
