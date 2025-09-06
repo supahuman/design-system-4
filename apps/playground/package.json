@@ -12,8 +12,8 @@
   "dependencies": {
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "@meroka/tokens": "workspace:*",
-    "@meroka/atoms": "workspace:*"
+    "@meroka/tokens": "^1.0.0",
+    "@meroka/atoms": "^1.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.33.0",
