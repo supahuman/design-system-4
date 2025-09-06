@@ -3,18 +3,12 @@ name: Deploy Playground
 on:
   push:
     branches: [main, master]
-    paths: ['apps/playground/**', 'packages/**']
-  workflow_run:
-    workflows: ['Design System CI/CD']
-    types:
-      - completed
-    branches: [main, master]
+  workflow_dispatch:
 
 jobs:
   deploy:
     name: Deploy to Vercel
     runs-on: ubuntu-latest
-    if: github.event.workflow_run.conclusion == 'success' || github.event_name == 'push'
 
     steps:
       - name: Checkout repository
