@@ -1,8 +1,8 @@
 {
   "name": "design-system-playground",
-  "buildCommand": "pnpm run build",
+  "buildCommand": "npm run build",
   "outputDirectory": "./dist",
-  "installCommand": "pnpm install --no-frozen-lockfile",
+  "installCommand": "npm install",
   "framework": "vite",
   "rewrites": [
     {
