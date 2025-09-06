@@ -9,7 +9,7 @@
     "apps/*"
   ],
   "scripts": {
-    "build": "pnpm -r build",
+    "build": "npm run build --workspaces",
     "dev": "pnpm -r dev",
     "test": "pnpm -r test",
     "lint": "eslint packages/**/*.ts apps/**/*.ts --fix",
@@ -42,6 +42,8 @@
     "@typescript-eslint/parser": "^6.14.0",
     "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.1.2",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "prettier": "^3.1.1",
