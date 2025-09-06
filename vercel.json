@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "name": "design-system-playground",
+  "builds": [
+    {
+      "src": "apps/playground/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/apps/playground/$1"
+    }
+  ]
+}
