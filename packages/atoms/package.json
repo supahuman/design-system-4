@@ -1,0 +1,33 @@
+{
+  "name": "@meroka/atoms",
+  "version": "1.0.0",
+  "description": "Atomic components for Meroka Design System",
+  "type": "module",
+  "main": "index.ts",
+  "exports": {
+    ".": "./index.ts"
+  },
+  "scripts": {
+    "build": "tsc --noEmit",
+    "dev": "tsc --noEmit --watch"
+  },
+  "keywords": [
+    "design-system",
+    "react",
+    "typescript",
+    "components"
+  ],
+  "author": "Meroka",
+  "license": "MIT",
+  "dependencies": {
+    "@meroka/tokens": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7"
+  }
+}

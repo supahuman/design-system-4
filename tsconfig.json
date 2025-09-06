@@ -1,0 +1,38 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "@meroka/tokens": ["./packages/tokens"],
+      "@meroka/atoms": ["./packages/atoms"],
+      "@meroka/molecules": ["./packages/molecules"],
+      "@meroka/organisms": ["./packages/organisms"],
+      "@meroka/templates": ["./packages/templates"],
+      "@meroka/pages": ["./packages/pages"]
+    },
+
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true
+  },
+  "include": ["packages/**/*", "apps/**/*", "types/**/*"],
+  "exclude": ["node_modules", "dist", "build", "*.config.*"]
+}

@@ -1,0 +1,60 @@
+/* Button Base Styles */
+.button {
+  border: 2px solid transparent;
+  border-radius: var(--borderRadius-md);
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+  color: var(--colors-neutral-50);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transitions-normal);
+  font-weight: var(--fontWeights-medium);
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadows-md);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+/* Variant Styles */
+.primary {
+  background-color: var(--colors-primary-500);
+  border-color: var(--colors-primary-500);
+}
+
+.primary:hover {
+  background-color: var(--colors-primary-600);
+  border-color: var(--colors-primary-600);
+}
+
+.secondary {
+  background-color: var(--colors-secondary-500);
+  border-color: var(--colors-secondary-500);
+}
+
+.secondary:hover {
+  background-color: var(--colors-secondary-600);
+  border-color: var(--colors-secondary-600);
+}
+
+/* Size Styles */
+.sm {
+  padding: var(--spacing-2) var(--spacing-3);
+  font-size: var(--fontSizes-sm);
+}
+
+.md {
+  padding: var(--spacing-3) var(--spacing-4);
+  font-size: var(--fontSizes-base);
+}
+
+.lg {
+  padding: var(--spacing-4) var(--spacing-6);
+  font-size: var(--fontSizes-lg);
+}
