@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Design tokens for Meroka Design System",
   "type": "module",
+  "private": true,
   "main": "index.ts",
   "exports": {
     ".": "./index.ts",
@@ -10,7 +11,8 @@
   },
   "scripts": {
     "build": "tsx generate-css.ts",
-    "dev": "tsx generate-css.ts --watch"
+    "dev": "tsx generate-css.ts --watch",
+    "lint": "echo 'No linting needed for tokens package'"
   },
   "keywords": [
     "design-tokens",

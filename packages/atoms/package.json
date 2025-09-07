@@ -3,13 +3,15 @@
   "version": "1.0.0",
   "description": "Atomic components for Meroka Design System",
   "type": "module",
+  "private": true,
   "main": "index.ts",
   "exports": {
     ".": "./index.ts"
   },
   "scripts": {
     "build": "tsc --noEmit",
-    "dev": "tsc --noEmit --watch"
+    "dev": "tsc --noEmit --watch",
+    "lint": "echo 'No specific linting for atoms package'"
   },
   "keywords": [
     "design-system",
@@ -20,7 +22,7 @@
   "author": "Meroka",
   "license": "MIT",
   "dependencies": {
-    "@meroka/tokens": "^1.0.0"
+    "@meroka/tokens": "workspace:*"
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",
