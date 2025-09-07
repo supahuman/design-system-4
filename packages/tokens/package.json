@@ -11,7 +11,8 @@
   },
   "scripts": {
     "build": "tsx generate-css.ts",
-    "dev": "tsx generate-css.ts --watch"
+    "dev": "tsx generate-css.ts --watch",
+    "lint": "echo 'No linting needed for tokens package'"
   },
   "keywords": [
     "design-tokens",
