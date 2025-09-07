@@ -9,22 +9,19 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-
     "baseUrl": ".",
     "paths": {
-      "@meroka/tokens": ["./packages/tokens"],
       "@meroka/atoms": ["./packages/atoms"],
       "@meroka/molecules": ["./packages/molecules"],
       "@meroka/organisms": ["./packages/organisms"],
+      "@meroka/pages": ["./packages/pages"],
       "@meroka/templates": ["./packages/templates"],
-      "@meroka/pages": ["./packages/pages"]
+      "@meroka/tokens": ["./packages/tokens"]
     },
-
     "skipLibCheck": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
@@ -34,5 +31,11 @@
     "sourceMap": true
   },
   "include": ["packages/**/*", "apps/**/*", "types/**/*"],
-  "exclude": ["node_modules", "dist", "build", "*.config.*"]
+  "exclude": ["node_modules", "dist", "build", "*.config.*"],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs",
+      "moduleResolution": "node10"
+    }
+  }
 }

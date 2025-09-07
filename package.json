@@ -24,7 +24,7 @@
     "type-check:tsc": "tsc --noEmit",
     "format": "prettier --write \"packages/**/*.{ts,tsx,js,jsx,json,md}\" \"apps/**/*.{ts,tsx,js,jsx,json,md}\"",
     "format:check": "prettier --check \"packages/**/*.{ts,tsx,js,jsx,json,md}\" \"apps/**/*.{ts,tsx,js,jsx,json,md}\"",
-    "storybook": "pnpm --filter storybook dev",
+    "storybook": "nx storybook playground",
     "playground": "pnpm --filter playground dev",
     "clean": "pnpm -r clean && rm -rf node_modules",
     "changeset": "changeset",
@@ -44,6 +44,14 @@
   "license": "MIT",
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
+    "@nx/js": "21.4.1",
+    "@nx/storybook": "21.4.1",
+    "@nx/web": "21.4.1",
+    "@storybook/react": "9.1.5",
+    "@storybook/react-vite": "9.1.5",
+    "@swc-node/register": "~1.9.1",
+    "@swc/core": "~1.5.7",
+    "@swc/helpers": "~0.5.11",
     "@types/node": "^20.10.0",
     "@types/react": "^18.2.45",
     "@types/react-dom": "^18.2.18",
@@ -57,7 +65,9 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "nx": "^21.4.1",
     "prettier": "^3.1.1",
-    "typescript": "^5.3.3",
+    "storybook": "9.1.5",
+    "ts-node": "10.9.1",
+    "typescript": "~5.8.2",
     "vite": "^5.0.10",
     "vitest": "^1.1.0"
   },
@@ -69,5 +79,6 @@
     "node": ">=18.0.0",
     "pnpm": ">=8.0.0"
   },
-  "packageManager": "pnpm@9.0.0"
+  "packageManager": "pnpm@9.0.0",
+  "dependencies": {}
 }

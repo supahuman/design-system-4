@@ -5,7 +5,7 @@ export {
   type ButtonProps,
   type ButtonVariant,
   type ButtonSize,
-} from './Button.js';
+} from './Button';
 
 // Default export for the entire atoms package
-export { Button as default } from './Button.js';
+export { Button as default } from './Button';
