@@ -18,6 +18,10 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
     "baseUrl": ".",
     "paths": {
       "@meroka/tokens": ["../../packages/tokens"],
@@ -26,9 +30,9 @@
   },
   "include": ["src", "../../types/**/*"],
   "exclude": [
-    "**/*.stories.ts",
-    "**/*.stories.js",
-    "**/*.stories.jsx",
-    "**/*.stories.tsx"
+    "stories/**/*",
+    "**/*.stories.*",
+    "node_modules/**/*",
+    "../../node_modules/**/*"
   ]
 }
