@@ -28,14 +28,15 @@
     "forceConsistentCasingInFileNames": true,
     "declaration": true,
     "declarationMap": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "types": ["vite/client", "node"]
   },
   "include": ["packages/**/*", "apps/**/*", "types/**/*"],
   "exclude": ["node_modules", "dist", "build", "*.config.*"],
   "ts-node": {
     "compilerOptions": {
-      "module": "commonjs",
-      "moduleResolution": "node10"
+      "module": "ESNext",
+      "moduleResolution": "bundler"
     }
   }
 }

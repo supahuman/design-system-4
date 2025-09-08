@@ -5,7 +5,9 @@ export {
   type ButtonProps,
   type ButtonVariant,
   type ButtonSize,
-} from './Button';
+} from './Button/Button';
+
+export { default as Input, type InputProps } from './Input/Input';
 
 // Default export for the entire atoms package
-export { Button as default } from './Button';
+export { Button as default } from './Button/Button';

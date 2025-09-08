@@ -1,6 +1,6 @@
 {
   "name": "@meroka/atoms",
-  "sourceRoot": "packages/atoms/src",
+  "sourceRoot": "packages/atoms",
   "projectType": "library",
   "targets": {
     "build": {
