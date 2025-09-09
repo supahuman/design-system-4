@@ -1,14 +1,17 @@
-import { defineConfig } from 'vite';
+/// <reference types="vite/client" />
+/// <reference types="node" />
+
+import type { UserConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import path from 'path';
+import { resolve } from 'path';
 
 // https://vite.dev/config/
-export default defineConfig({
+const config: UserConfig = {
   plugins: [react()],
   resolve: {
     alias: {
-      '@meroka/tokens': path.resolve(__dirname, '../../packages/tokens'),
-      '@meroka/atoms': path.resolve(__dirname, '../../packages/atoms'),
+      '@meroka/tokens': resolve(__dirname, '../../packages/tokens'),
+      '@meroka/atoms': resolve(__dirname, '../../packages/atoms'),
     },
   },
   css: {
@@ -16,4 +19,6 @@ export default defineConfig({
       localsConvention: 'camelCase',
     },
   },
-});
+};
+
+export default config;

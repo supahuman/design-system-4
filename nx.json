@@ -9,7 +9,10 @@
       "!{projectRoot}/src/test-setup.[jt]s",
       "!{projectRoot}/test-setup.[jt]s",
       "!{projectRoot}/.eslintrc.json",
-      "!{projectRoot}/eslint.config.js"
+      "!{projectRoot}/eslint.config.js",
+      "!{projectRoot}/**/*.stories.@(js|jsx|ts|tsx|mdx)",
+      "!{projectRoot}/.storybook/**/*",
+      "!{projectRoot}/tsconfig.storybook.json"
     ],
     "sharedGlobals": []
   },
@@ -54,5 +57,16 @@
     "version": {
       "preVersionCommand": "npx nx run-many -t build"
     }
-  }
+  },
+  "plugins": [
+    {
+      "plugin": "@nx/storybook/plugin",
+      "options": {
+        "serveStorybookTargetName": "storybook",
+        "buildStorybookTargetName": "build-storybook",
+        "testStorybookTargetName": "test-storybook",
+        "staticStorybookTargetName": "static-storybook"
+      }
+    }
+  ]
 }
