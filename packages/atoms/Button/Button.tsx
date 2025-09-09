@@ -12,6 +12,9 @@ export interface ButtonProps
   variant?: ButtonVariant;
   size?: ButtonSize;
   children: React.ReactNode;
+  // Accessibility props
+  'aria-label'?: string;
+  'aria-describedby'?: string;
 }
 
 // TypeScript: Function component with CSS modules

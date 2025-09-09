@@ -4,6 +4,10 @@ import styles from './Input.module.css';
 
 export interface InputProps extends React.ComponentProps<'input'> {
   variant?: 'default' | 'error';
+  // Accessibility props
+  'aria-label'?: string;
+  'aria-describedby'?: string;
+  'aria-invalid'?: boolean | 'true' | 'false' | 'grammar' | 'spelling';
 }
 
 const Input: React.FC<InputProps> = ({
